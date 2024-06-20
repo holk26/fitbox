@@ -6,6 +6,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata = {
   title: "FitBox",
   description: "A fitness app for everyone",
+  manifest: "/webmanifest.manifest",
 };
 
 export default function RootLayout({ children }) {
