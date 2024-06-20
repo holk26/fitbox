@@ -1,25 +1,41 @@
-"use client"
-import Link from "next/link"
-import { Button } from "@/components/ui/button"
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card"
-import { Table, TableHeader, TableRow, TableHead, TableBody, TableCell } from "@/components/ui/table"
-import { Badge } from "@/components/ui/badge"
-import { ResponsiveLine } from "@nivo/line"
-import { ResponsiveBar } from "@nivo/bar"
+"use client";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
+import {
+  Table,
+  TableHeader,
+  TableRow,
+  TableHead,
+  TableBody,
+  TableCell,
+} from "@/components/ui/table";
+import { Badge } from "@/components/ui/badge";
+import { ResponsiveLine } from "@nivo/line";
+import { ResponsiveBar } from "@nivo/bar";
+
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
 export function DashBoard() {
   return (
-    (<div className="flex flex-col w-full min-h-screen">
+    <div className="flex flex-col w-full min-h-screen">
       <header className="flex items-center h-16 px-4 border-b shrink-0 md:px-6">
         <Link
           href="#"
           className="flex items-center gap-2 text-lg font-semibold md:text-base"
-          prefetch={false}>
+          prefetch={false}
+        >
           <DumbbellIcon className="w-6 h-6" />
           <span>Fitbox</span>
         </Link>
-        <nav
-          className="hidden gap-6 text-lg font-medium md:flex md:flex-row md:items-center md:gap-5 md:text-sm lg:gap-6 ml-auto">
+        <nav className="hidden gap-6 text-lg font-medium md:flex md:flex-row md:items-center md:gap-5 md:text-sm lg:gap-6 ml-auto">
           <Link href="#" className="font-bold" prefetch={false}>
             Miembros
           </Link>
@@ -35,11 +51,12 @@ export function DashBoard() {
         </nav>
         <Button variant="ghost" size="icon" className="rounded-full ml-auto">
           <img
-            src="/placeholder.svg"
+            src="/favicon.ico"
             width="32"
             height="32"
             className="rounded-full"
-            alt="Avatar" />
+            alt="Avatar"
+          />
           <span className="sr-only">Toggle user menu</span>
         </Button>
       </header>
@@ -47,22 +64,30 @@ export function DashBoard() {
         <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
           <Card>
             <CardHeader className="flex flex-row items-center justify-between pb-2">
-              <CardTitle className="text-sm font-medium">Total de Miembros</CardTitle>
+              <CardTitle className="text-sm font-medium">
+                Total de Miembros
+              </CardTitle>
               <UsersIcon className="w-4 h-4 text-muted-foreground" />
             </CardHeader>
             <CardContent>
               <div className="text-2xl font-bold">1,234</div>
-              <p className="text-xs text-muted-foreground">+5.2% desde el mes pasado</p>
+              <p className="text-xs text-muted-foreground">
+                +5.2% desde el mes pasado
+              </p>
             </CardContent>
           </Card>
           <Card>
             <CardHeader className="flex flex-row items-center justify-between pb-2">
-              <CardTitle className="text-sm font-medium">Clases Programadas</CardTitle>
+              <CardTitle className="text-sm font-medium">
+                Clases Programadas
+              </CardTitle>
               <CalendarIcon className="w-4 h-4 text-muted-foreground" />
             </CardHeader>
             <CardContent>
               <div className="text-2xl font-bold">42</div>
-              <p className="text-xs text-muted-foreground">+3 desde la semana pasada</p>
+              <p className="text-xs text-muted-foreground">
+                +3 desde la semana pasada
+              </p>
             </CardContent>
           </Card>
           <Card>
@@ -72,24 +97,32 @@ export function DashBoard() {
             </CardHeader>
             <CardContent>
               <div className="text-2xl font-bold">$45,231.89</div>
-              <p className="text-xs text-muted-foreground">+12% desde el mes pasado</p>
+              <p className="text-xs text-muted-foreground">
+                +12% desde el mes pasado
+              </p>
             </CardContent>
           </Card>
           <Card>
             <CardHeader className="flex flex-row items-center justify-between pb-2">
-              <CardTitle className="text-sm font-medium">Instructores</CardTitle>
+              <CardTitle className="text-sm font-medium">
+                Instructores
+              </CardTitle>
               <UsersIcon className="w-4 h-4 text-muted-foreground" />
             </CardHeader>
             <CardContent>
               <div className="text-2xl font-bold">18</div>
-              <p className="text-xs text-muted-foreground">+2 desde el mes pasado</p>
+              <p className="text-xs text-muted-foreground">
+                +2 desde el mes pasado
+              </p>
             </CardContent>
           </Card>
         </div>
         <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
           <Card className="col-span-2">
             <CardHeader className="flex flex-row items-center justify-between pb-2">
-              <CardTitle className="text-sm font-medium">Asistencia a Clases</CardTitle>
+              <CardTitle className="text-sm font-medium">
+                Asistencia a Clases
+              </CardTitle>
               <CalendarIcon className="w-4 h-4 text-muted-foreground" />
             </CardHeader>
             <CardContent>
@@ -98,7 +131,9 @@ export function DashBoard() {
           </Card>
           <Card>
             <CardHeader className="flex flex-row items-center justify-between pb-2">
-              <CardTitle className="text-sm font-medium">Nuevos Miembros</CardTitle>
+              <CardTitle className="text-sm font-medium">
+                Nuevos Miembros
+              </CardTitle>
               <UsersIcon className="w-4 h-4 text-muted-foreground" />
             </CardHeader>
             <CardContent>
@@ -109,7 +144,9 @@ export function DashBoard() {
         <div>
           <Card>
             <CardHeader className="flex flex-row items-center justify-between pb-2">
-              <CardTitle className="text-sm font-medium">Miembros Activos</CardTitle>
+              <CardTitle className="text-sm font-medium">
+                Miembros Activos
+              </CardTitle>
               <UsersIcon className="w-4 h-4 text-muted-foreground" />
             </CardHeader>
             <CardContent>
@@ -161,13 +198,13 @@ export function DashBoard() {
           </Card>
         </div>
       </main>
-    </div>)
+    </div>
   );
 }
 
 function BarChart(props) {
   return (
-    (<div {...props}>
+    <div {...props}>
       <ResponsiveBar
         data={[
           { name: "Jan", count: 111 },
@@ -212,15 +249,15 @@ function BarChart(props) {
         tooltipLabel={({ id }) => `${id}`}
         enableLabel={false}
         role="application"
-        ariaLabel="A bar chart showing data" />
-    </div>)
+        ariaLabel="A bar chart showing data"
+      />
+    </div>
   );
 }
 
-
 function CalendarIcon(props) {
   return (
-    (<svg
+    <svg
       {...props}
       xmlns="http://www.w3.org/2000/svg"
       width="24"
@@ -230,19 +267,19 @@ function CalendarIcon(props) {
       stroke="currentColor"
       strokeWidth="2"
       strokeLinecap="round"
-      strokeLinejoin="round">
+      strokeLinejoin="round"
+    >
       <path d="M8 2v4" />
       <path d="M16 2v4" />
       <rect width="18" height="18" x="3" y="4" rx="2" />
       <path d="M3 10h18" />
-    </svg>)
+    </svg>
   );
 }
-
 
 function DollarSignIcon(props) {
   return (
-    (<svg
+    <svg
       {...props}
       xmlns="http://www.w3.org/2000/svg"
       width="24"
@@ -252,17 +289,17 @@ function DollarSignIcon(props) {
       stroke="currentColor"
       strokeWidth="2"
       strokeLinecap="round"
-      strokeLinejoin="round">
+      strokeLinejoin="round"
+    >
       <line x1="12" x2="12" y1="2" y2="22" />
       <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
-    </svg>)
+    </svg>
   );
 }
-
 
 function DumbbellIcon(props) {
   return (
-    (<svg
+    <svg
       {...props}
       xmlns="http://www.w3.org/2000/svg"
       width="24"
@@ -272,22 +309,20 @@ function DumbbellIcon(props) {
       stroke="currentColor"
       strokeWidth="2"
       strokeLinecap="round"
-      strokeLinejoin="round">
+      strokeLinejoin="round"
+    >
       <path d="M14.4 14.4 9.6 9.6" />
-      <path
-        d="M18.657 21.485a2 2 0 1 1-2.829-2.828l-1.767 1.768a2 2 0 1 1-2.829-2.829l6.364-6.364a2 2 0 1 1 2.829 2.829l-1.768 1.767a2 2 0 1 1 2.828 2.829z" />
+      <path d="M18.657 21.485a2 2 0 1 1-2.829-2.828l-1.767 1.768a2 2 0 1 1-2.829-2.829l6.364-6.364a2 2 0 1 1 2.829 2.829l-1.768 1.767a2 2 0 1 1 2.828 2.829z" />
       <path d="m21.5 21.5-1.4-1.4" />
       <path d="M3.9 3.9 2.5 2.5" />
-      <path
-        d="M6.404 12.768a2 2 0 1 1-2.829-2.829l1.768-1.767a2 2 0 1 1-2.828-2.829l2.828-2.828a2 2 0 1 1 2.829 2.828l1.767-1.768a2 2 0 1 1 2.829 2.829z" />
-    </svg>)
+      <path d="M6.404 12.768a2 2 0 1 1-2.829-2.829l1.768-1.767a2 2 0 1 1-2.828-2.829l2.828-2.828a2 2 0 1 1 2.829 2.828l1.767-1.768a2 2 0 1 1 2.829 2.829z" />
+    </svg>
   );
 }
 
-
 function LineChart(props) {
   return (
-    (<div {...props}>
+    <div {...props}>
       <ResponsiveLine
         data={[
           {
@@ -352,15 +387,15 @@ function LineChart(props) {
             },
           },
         }}
-        role="application" />
-    </div>)
+        role="application"
+      />
+    </div>
   );
 }
 
-
 function UsersIcon(props) {
   return (
-    (<svg
+    <svg
       {...props}
       xmlns="http://www.w3.org/2000/svg"
       width="24"
@@ -370,11 +405,12 @@ function UsersIcon(props) {
       stroke="currentColor"
       strokeWidth="2"
       strokeLinecap="round"
-      strokeLinejoin="round">
+      strokeLinejoin="round"
+    >
       <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
       <circle cx="9" cy="7" r="4" />
       <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
       <path d="M16 3.13a4 4 0 0 1 0 7.75" />
-    </svg>)
+    </svg>
   );
 }
