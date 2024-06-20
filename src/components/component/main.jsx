@@ -114,7 +114,7 @@ export function Main() {
             <span className="sr-only">Mostrar menú</span>
           </Button>
           {isMenuOpen && (
-            <nav className="absolute top-16 left-0 w-full bg-background border-b z-10 bg-white shadow-md">
+            <nav className="absolute top-16 left-0 w-full border-b z-10 bg-white shadow-md">
               <Link
                 href="#"
                 className="block px-4 py-3 text-sm font-medium hover:bg-accent hover:text-accent-foreground"
