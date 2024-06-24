@@ -1,36 +1,33 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Gym Management System Documentation
 
-## Getting Started
+## Introduction
+The Gym Management System is a software application designed to streamline the operations of a gym or fitness center. It provides various features to manage memberships, track attendance, schedule classes, and handle billing.
 
-First, run the development server:
+## Features
+- Membership Management: Allows the creation, modification, and deletion of member profiles. Tracks membership details such as start date, end date, and payment status.
+- Attendance Tracking: Records member attendance for each session or class. Generates reports to monitor member participation.
+- Class Scheduling: Enables the creation and management of class schedules. Allows members to sign up for classes and receive notifications.
+- Billing and Payments: Manages member billing, including membership fees, class fees, and additional charges. Generates invoices and tracks payment history.
+- Staff Management: Maintains staff profiles, including contact information, roles, and schedules.
+- Reporting and Analytics: Provides various reports and analytics to monitor gym performance, member trends, and financials.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Installation
+1. Clone the repository from [GitHub](https://github.com/your-repo-link).
+2. Install the required dependencies using `npm install`.
+3. Configure the database connection in the `config.js` file.
+4. Run the application using `npm start`.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Usage
+1. Open the Gym Management System application.
+2. Login using your admin credentials.
+3. Navigate through the different modules to manage memberships, track attendance, schedule classes, and handle billing.
+4. Generate reports and analytics to monitor gym performance and member trends.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Technologies Used
+- Front-end: HTML, CSS, JavaScript
+- Back-end: Node.js, Express.js
+- Database: MongoDB
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Contributors
+- John Doe
+- Jane Smith
