@@ -1,42 +1,16 @@
 import express from 'express'
-import { createClass, getClassById, updateClass, deleteClass } from '../../services/classService.js'
+import {
+  createClassController,
+  getClassByIdController,
+  updateClassController,
+  deleteClassController
+} from '../../controllers/classController.js'
 
 const router = express.Router()
 
-router.post('/', async (req, res) => {
-  try {
-    const newClass = await createClass(req.body)
-    res.status(201).json(newClass)
-  } catch (error) {
-    res.status(400).json({ error: error.message })
-  }
-})
-
-router.get('/:id', async (req, res) => {
-  try {
-    const classData = await getClassById(req.params.id)
-    res.status(200).json(classData)
-  } catch (error) {
-    res.status(404).json({ error: 'Class not found' })
-  }
-})
-
-router.put('/:id', async (req, res) => {
-  try {
-    const updatedClass = await updateClass(req.params.id, req.body)
-    res.status(200).json(updatedClass)
-  } catch (error) {
-    res.status(400).json({ error: error.message })
-  }
-})
-
-router.delete('/:id', async (req, res) => {
-  try {
-    await deleteClass(req.params.id)
-    res.status(204).end()
-  } catch (error) {
-    res.status(400).json({ error: error.message })
-  }
-})
+router.post('/', createClassController)
+router.get('/:id', getClassByIdController)
+router.put('/:id', updateClassController)
+router.delete('/:id', deleteClassController)
 
 export default router

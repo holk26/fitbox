@@ -1,2 +1,184 @@
-GET /users/12 HTTP/1.1
-Host: localhost:4000
+POST /users HTTP/1.1
+Host: tu-dominio.com
+Content-Type: application/json
+
+{
+  "email": "usuario@example.com",
+  "password": "contraseña123",
+  "name": "Usuario Ejemplo",
+  "role": "MEMBER",
+  "googleId": "google123",
+  "appleId": "apple456"
+}
+
+GET /users/1 HTTP/1.1
+Host: tu-dominio.com
+
+PUT /users/1 HTTP/1.1
+Host: tu-dominio.com
+Content-Type: application/json
+
+{
+  "email": "usuario_actualizado@example.com",
+  "name": "Usuario Actualizado"
+}
+
+DELETE /users/1 HTTP/1.1
+Host: tu-dominio.com
+
+POST /profiles HTTP/1.1
+Host: tu-dominio.com
+Content-Type: application/json
+
+{
+  "userId": "1",
+  "bio": "Este es mi perfil",
+  "phone": "123-456-7890",
+  "photoUrl": "https://ejemplo.com/foto.png"
+}
+
+GET /profiles/1 HTTP/1.1
+Host: tu-dominio.com
+
+PUT /profiles/1 HTTP/1.1
+Host: tu-dominio.com
+Content-Type: application/json
+
+{
+  "bio": "Mi nuevo perfil actualizado",
+  "phone": "987-654-3210"
+}
+
+DELETE /profiles/1 HTTP/1.1
+Host: tu-dominio.com
+
+POST /classes HTTP/1.1
+Host: tu-dominio.com
+Content-Type: application/json
+
+{
+  "title": "Clase de Yoga",
+  "description": "Clase de yoga para todos los niveles",
+  "startTime": "2024-06-25T10:00:00Z",
+  "endTime": "2024-06-25T11:00:00Z",
+  "instructorId": "1",
+  "maxAttendees": 20,
+  "qrCode": "https://tu-dominio.com/qr/yoga123"
+}
+
+GET /classes/1 HTTP/1.1
+Host: tu-dominio.com
+
+PUT /classes/1 HTTP/1.1
+Host: tu-dominio.com
+Content-Type: application/json
+
+{
+  "title": "Clase de Yoga Actualizada",
+  "maxAttendees": 25
+}
+
+DELETE /classes/1 HTTP/1.1
+Host: tu-dominio.com
+
+POST /attendances HTTP/1.1
+Host: tu-dominio.com
+Content-Type: application/json
+
+{
+  "userId": "1",
+  "classId": "1",
+  "attendedAt": "2024-06-25T10:00:00Z",
+  "viaQR": true
+}
+
+GET /attendances/1 HTTP/1.1
+Host: tu-dominio.com
+
+PUT /attendances/1 HTTP/1.1
+Host: tu-dominio.com
+Content-Type: application/json
+
+{
+  "attendedAt": "2024-06-25T11:00:00Z"
+}
+
+DELETE /attendances/1 HTTP/1.1
+Host: tu-dominio.com
+
+POST /memberships HTTP/1.1
+Host: tu-dominio.com
+Content-Type: application/json
+
+{
+  "userId": "1",
+  "startDate": "2024-06-25",
+  "endDate": "2024-07-25",
+  "isActive": true
+}
+
+GET /memberships/1 HTTP/1.1
+Host: tu-dominio.com
+
+PUT /memberships/1 HTTP/1.1
+Host: tu-dominio.com
+Content-Type: application/json
+
+{
+  "endDate": "2024-08-25",
+  "isActive": false
+}
+
+DELETE /memberships/1 HTTP/1.1
+Host: tu-dominio.com
+
+POST /skills HTTP/1.1
+Host: tu-dominio.com
+Content-Type: application/json
+
+{
+  "userId": "1",
+  "name": "JavaScript",
+  "value": "Intermedio"
+}
+
+GET /skills/1 HTTP/1.1
+Host: tu-dominio.com
+
+PUT /skills/1 HTTP/1.1
+Host: tu-dominio.com
+Content-Type: application/json
+
+{
+  "value": "Avanzado"
+}
+
+DELETE /skills/1 HTTP/1.1
+Host: tu-dominio.com
+
+POST /subscriptions HTTP/1.1
+Host: tu-dominio.com
+Content-Type: application/json
+
+{
+  "gymId": "1",
+  "gymName": "Super Gym",
+  "startDate": "2024-06-25",
+  "endDate": "2024-07-25",
+  "isActive": true
+}
+
+GET /subscriptions/1 HTTP/1.1
+Host: tu-dominio.com
+
+PUT /subscriptions/1 HTTP/1.1
+Host: tu-dominio.com
+Content-Type: application/json
+
+{
+  "endDate": "2024-08-25",
+  "isActive": false
+}
+
+DELETE /subscriptions/1 HTTP/1.1
+Host: tu-dominio.com
